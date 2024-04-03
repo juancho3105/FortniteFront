@@ -1,0 +1,41 @@
+@import url(https://db.onlinewebfonts.com/c/cdc8c3de1e6bd5a9a67c6a001f9fedd0?family=Burbank+Big+Condensed+Black);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: b;
+    font-family: "Burbank Big Condensed Black";
+}
+
+body {
+    background-color: #ffff99;
+    height: 100%;
+}
+
+.form {
+    width: 600px;
+    background: #2a095f;
+    padding: 30px;
+    margin: auto;
+    margin-top: auto;
+    border-radius: 2px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+}
+
+.form h4 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-family: "Burbank Big Condensed Black";
+    color: #f0ed07;
+}
+
+form button {
+    color: #000;
+    background: #f0ed07;
+    border: none;
+    padding: 8px;
+    font-size: 18px;
+}

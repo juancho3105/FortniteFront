@@ -1,0 +1,32 @@
+@import url(https://db.onlinewebfonts.com/c/cdc8c3de1e6bd5a9a67c6a001f9fedd0?family=Burbank+Big+Condensed+Black);
+
+* {
+    font-family: "Burbank Big Condensed Black";
+}
+
+body {
+    background-color: #ffff99;
+    height: 100%;
+}
+
+.example-card {
+    max-width: 400px;
+    height: 440px;
+}
+
+.example-header-image {
+    background-size: cover;
+}
+
+.carru {
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: dense;
+    grid-auto-rows: 25rem;
+    grid-template-columns:  repeat(auto-fill, minmax(15rem, 1fr));
+    padding: 1em;
+}
+
+mat-card-content {
+    padding-top: 10px;
+}

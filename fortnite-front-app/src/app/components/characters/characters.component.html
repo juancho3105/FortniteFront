@@ -1,0 +1,21 @@
+<body>
+  <div class="carru">
+    <mat-card *ngFor="let character of characters" class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image" style="background-image: url('http://localhost:3000/{{character.img}}')"></div>
+        <mat-card-title>{{character.name.toUpperCase()}}</mat-card-title>
+        <mat-card-subtitle>{{character.season}}</mat-card-subtitle>
+      </mat-card-header>
+      <img
+        mat-card-image
+        src="http://localhost:3000/{{character.img}}"
+        alt="Photo of fortnite character"
+      />
+      <mat-card-content>
+        <p>Ubicación: {{character.location}}</p>
+        <p>Arma: {{character.gun}}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</body>
+

@@ -56,7 +56,11 @@ export class CharactersComponent implements OnInit {
   }
     
   deleteCharacter(id: string) {
-    this.fortniteService.deleteCharacter(id)
+    this.fortniteService.deleteCharacter(id).subscribe(()=>{
+      this.characters = []
+      this.getCharacters()
+    })
+    
   }
     
 }

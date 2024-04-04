@@ -11,12 +11,7 @@ import { Character } from 'src/app/models/Character';
 })
 export class UpdateCharacterComponent implements OnInit {
 
-  //character: Character = Object.create(null);
-
   character: any = {}
-  imgSelected: any;
-
-  datosFormulario: any;
   
   constructor(
     private fortniteService: FortniteService,
@@ -33,7 +28,6 @@ export class UpdateCharacterComponent implements OnInit {
         this.character = {
           _id: data._id,
           name: data.name,
-          img: data.img,
           season: data.season,
           location: data.location,
           gun: data.gun
@@ -43,9 +37,10 @@ export class UpdateCharacterComponent implements OnInit {
   }
 
   updateCharacter(){
-    this.fortniteService.updateCharacter(this.character, this.imgSelected).subscribe(
+    this.fortniteService.updateCharacter(this.character).subscribe(
       (respuesta) => {
         console.log('Personaje actualizado correctamente', respuesta);
+        this._router.navigateByUrl('/characters')
       },
       (error) => {
         if (error instanceof HttpErrorResponse) {
@@ -55,10 +50,5 @@ export class UpdateCharacterComponent implements OnInit {
         }
       }
     )
-  }
-
-  handleImgSelect(event: any) {
-    const selectedImg = event.target.files[0]
-    this.imgSelected = selectedImg
   }
 }

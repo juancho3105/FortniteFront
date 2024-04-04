@@ -27,6 +27,7 @@ export class NewCharacterComponent implements OnInit {
     this.fortniteService.addCharacter(this.character, this.imgSelected).subscribe(
       (respuesta) => {
         console.log('Personaje creado correctamente', respuesta);
+        this._router.navigateByUrl('/characters')
       },
       (error) => {
         if (error instanceof HttpErrorResponse) {

@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Character } from '../models/Character';
-import { Observable, catchError } from 'rxjs';
+import { Observable, catchError, of, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -41,12 +41,11 @@ export class FortniteService {
     }
   }
 
-  updateCharacter(character: Character, selectedFile: File): Observable<Character>{
+  updateCharacter(character: Character): Observable<Character>{
     try{
 
       const formData = new FormData()
       formData.append('name', character.name)
-      formData.append('img', selectedFile)
       formData.append('season', character.season)
       formData.append('location', character.location)
       formData.append('gun', character.gun)
@@ -59,7 +58,10 @@ export class FortniteService {
     }
   }
 
-  deleteCharacter(id: string): Observable<any> {
-    return this._httpClient.delete<any>(`${environment.baseUrl}/personajes/${id}`);
+  deleteCharacter(id: string) {
+    console.log(id);
+    console.log(`${environment.baseUrl}/personajes/${id}`);
+    
+    return this._httpClient.delete(`${environment.baseUrl}/personajes/${id}`);
   }
 }

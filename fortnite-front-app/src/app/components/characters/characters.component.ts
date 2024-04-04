@@ -53,6 +53,10 @@ export class CharactersComponent implements OnInit {
         this.characters = []
       }
     });
-    
   }
+    
+  deleteCharacter(id: string) {
+    this.fortniteService.deleteCharacter(id)
+  }
+    
 }

@@ -14,6 +14,9 @@
       <mat-card-content>
         <p>Ubicación: {{character.location}}</p>
         <p>Arma: {{character.gun}}</p>
+        <p>Id: {{character._id}}</p>
+        <button [routerLink]="['/edit', character._id]">Editar</button>
+        <button (click)="deleteCharacter(character._id)">Eliminar</button>
       </mat-card-content>
     </mat-card>
   </div>

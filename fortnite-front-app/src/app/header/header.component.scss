@@ -1,11 +1,19 @@
+@import url(https://db.onlinewebfonts.com/c/cdc8c3de1e6bd5a9a67c6a001f9fedd0?family=Burbank+Big+Condensed+Black);
+
 * {
     background: #2a095f;
     color: white;
     font-family: "Burbank Big Condensed Black";
 }
 
+.title {
+    font-size: 35px;
+    margin: 10px;
+}
+
 .routes {
-    margin: 10px;    
+    margin: 10px;
+    font-size: 25px;    
 }
 
 span:hover {

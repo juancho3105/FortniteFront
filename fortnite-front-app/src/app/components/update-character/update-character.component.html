@@ -1,0 +1,77 @@
+<body>
+    <form class="form" (ngSubmit)="updateCharacter()">
+        <h4>Formulario Edición Personajes</h4>
+        <div class="mb-3">
+          <label for="name" class="form-label">Nombre</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            aria-describedby="nameDescription"
+            [(ngModel)]="character.name"
+            name="name"
+            required
+            value="{{character.name}}"
+          />
+          <div id="nameDescription" class="form-text">
+            Ingrese el nombre del personaje.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="img" class="form-label">Ingrese la imagen de este personaje</label>
+          <input class="form-control" type="file" #imageFile
+          (change)="handleImgSelect($event)"
+           required/>
+        </div>
+        <div class="mb-3">
+          <label for="season" class="form-label">Temporada</label>
+          <select id="season" class="form-select" [(ngModel)]="character.season"
+          name="season"
+          required>
+            <option>Seleccione una temporada</option>
+            <option>Temporada 1</option>
+            <option>Temporada 2</option>
+            <option>Temporada 3</option>
+            <option>Temporada 4</option>
+            <option>Temporada 5</option>
+            <option>Temporada 6</option>
+            <option>Temporada 7</option>
+            <option>Temporada 8</option>
+            <option>Temporada 9</option>
+            <option>Temporada X</option>
+            <option>Temporada Origenes</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="location" class="form-label">Ubicacion</label>
+          <input
+            [(ngModel)]="character.location"
+            name="location"
+            type="text"
+            class="form-control"
+            id="location"
+            aria-describedby="locationDescription"
+            required
+          />
+          <div id="locationDescription" class="form-text">
+            Ingrese la ubicacion en la que se encuentra este personaje.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="gun" class="form-label">Arma</label>
+          <input
+            [(ngModel)]="character.gun"
+            name="gun"
+            type="text"
+            class="form-control"
+            id="gun"
+            aria-describedby="armaDescription"
+            required
+          />
+          <div id="armaDescription" class="form-text">
+            Ingrese el arma principal de este personaje
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Registrar</button>
+      </form>
+</body>

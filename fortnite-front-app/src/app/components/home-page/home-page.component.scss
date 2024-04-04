@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Burbank Big Condensed Black";
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../../../images/Background_Home.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    margin-left: 60px;
+}
+
+p {
+    font-size: 120px;
+    color: white;
+    margin-bottom: 0px;
+}
+
+button {
+    padding: 10px 20px 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    color: #000;
+    background: #f0ed07;
+    font-size: 30px;
+    border-radius: 20px;
+}
+
+span {
+    font-size: 30px;
+    color: white;
+    font-style: italic;
+    opacity: 0.85;
+    margin-top: 0px;
+}
+

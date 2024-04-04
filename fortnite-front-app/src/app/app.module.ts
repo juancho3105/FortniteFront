@@ -16,6 +16,8 @@ import { MatInputModule } from '@angular/material/input';
 import { CarruselComponent } from './components/carrusel/carrusel.component';
 import { NewCharacterComponent } from './components/new-character/new-character.component';
 import { FormsModule } from '@angular/forms';
+import { HomePageComponent } from './components/home-page/home-page.component';
+import { UpdateCharacterComponent } from './components/update-character/update-character.component';
 
 
 
@@ -27,7 +29,9 @@ import { FormsModule } from '@angular/forms';
     CharactersComponent,
     PageNotFoundComponent,
     CarruselComponent,
-    NewCharacterComponent
+    NewCharacterComponent,
+    HomePageComponent,
+    UpdateCharacterComponent
   ],
   imports: [
     BrowserModule,

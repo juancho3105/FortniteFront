@@ -11,7 +11,7 @@ body {
 
 .example-card {
     max-width: 400px;
-    height: 440px;
+    height: 460px;
 }
 
 .example-header-image {
@@ -22,11 +22,20 @@ body {
     display: grid;
     gap: 1rem;
     grid-auto-flow: dense;
-    grid-auto-rows: 25rem;
+    grid-auto-rows: 30rem;
     grid-template-columns:  repeat(auto-fill, minmax(15rem, 1fr));
     padding: 1em;
 }
 
+mat-card-title {
+    font-size: 27px;
+}
+
+mat-card-subtitle {
+    font-size: 20px;
+}
+
 mat-card-content {
     padding-top: 10px;
+    font-size: 20px;
 }

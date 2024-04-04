@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  api:
+    build: ./FortniteAPI
+    ports:      
+      - "3000:3000"
+    depends_on:
+      - mongodb
+  frontend:
+    build: ./fortnite-front-app
+    ports:
+      - "80:80"
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
